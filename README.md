@@ -1,1 +1,1 @@
-# lung-cancer-classification-system
+# Lung Cancer Classification System
