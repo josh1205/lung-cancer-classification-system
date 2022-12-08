@@ -78,7 +78,7 @@ export const Impact = () => {
                         <div className="skill-bx wow zoomIn">
                         <h1>{`Meet the Team`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Josh", "Garret", "Danilo", "Giovanna", "Raymond" ]'><span className="wrap">{text}</span></span></h1>
                             <h2>Impact</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <p> affect the mental well-being of patients, carers, and families. Anxiety, anguish, and depression are typical emotions experienced after this life-altering event. <br></br> Roles at work, school, and home may all change. It's critical to detect these changes and seek assistance when required.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
