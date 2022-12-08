@@ -1,3 +1,6 @@
 {
-    "name": "lung-cancer-classification-system"
+    "name": "lung-cancer-classification-system",
+    "dependencies": {
+        "@material-ui/core": "^4.12.4"
+    }
 }
