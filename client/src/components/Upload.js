@@ -14,7 +14,6 @@ class FileUploadButton extends Component {
           onChange={this.handleFileUpload}
           type="file"
           style={{ display: "none" }}
-          // multiple={false}
         />
         <button onClick={() => this.refs.fileInput.click()}>Upload File</button>
       </React.Fragment>
