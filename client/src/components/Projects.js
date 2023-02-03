@@ -53,10 +53,10 @@ export const Projects = () => {
                   <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                     <h2>CT Scan</h2>
                     <p>stage 0 – the cancer is where it started (in situ) and hasn't spread
-stage 1 – the cancer is small and hasn't spread anywhere else
-stage 2 – the cancer has grown, but hasn't spread
-stage 3 – the cancer is larger and may have spread to the surrounding tissues and/or the lymph nodes (or "glands", part of the immune system)
-stage 4 – the cancer has spread from where it started to at least 1 other body organ, also known as "secondary" or "metastatic" cancer</p>
+                        stage 1 – the cancer is small and hasn't spread anywhere else
+                        stage 2 – the cancer has grown, but hasn't spread
+                        stage 3 – the cancer is larger and may have spread to the surrounding tissues and/or the lymph nodes (or "glands", part of the immune system)
+                        stage 4 – the cancer has spread from where it started to at least 1 other body organ, also known as "secondary" or "metastatic" cancer</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
