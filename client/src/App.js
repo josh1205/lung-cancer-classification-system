@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+//Auth
+import { UserAuthContextProvider } from "./contexts/UserAuthContext";
+
+// Style
 import './App.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Impact } from "./components/Impact";
-import { Projects } from "./components/Projects";
-import { Footer } from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Upload } from 'react-bootstrap-icons';
+
+// Pages
+import { LandingPage } from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <Upload />
-      <Impact />
-      <Projects />
-      <Footer />
+      <UserAuthContextProvider>
+        <LandingPage />
+      </UserAuthContextProvider>
     </div>
   );
 }

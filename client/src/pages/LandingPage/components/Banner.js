@@ -1,6 +1,5 @@
-import React, { useState, useEffect, Fragment} from "react";
+import { React } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import headerImg from "../assets/img/docc.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -18,7 +17,6 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline"><center>Cancer Classification</center></span>
-                {/* <h1>{`Meet the Team`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Josh", "Garret", "Danilo", "Giovanna", "Raymond" ]'><span className="wrap">{text}</span></span></h1> */}
                   <p>When determining the appropriate treatment options, the clinical stage is frequently a crucial factor. It can also be applied when attempting to determine a person's outlook or prognosis. For instance, the stage at the time of diagnosis determines the survival rates for the majority of cancer types.</p>
                   <button onClick={() => console.log('connect')}>Upload below <ArrowRightCircle size={25} /></button>
               
