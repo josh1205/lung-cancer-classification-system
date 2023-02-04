@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter1 from "../../../assets/img/meter1.svg";
+import meter2 from "../../../assets/img/meter2.svg";
+import meter3 from "../../../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
 
 export const Impact = () => {
 
@@ -76,24 +75,24 @@ export const Impact = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="skill-bx wow zoomIn">
-                        <h1>{`Meet the Team`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Josh", "Garret", "Danilo", "Giovanna", "Raymond" ]'><span className="wrap">{text}</span></span></h1>
+                        <h1>{`Meet the Team`} <span className="txt-rotate" data-rotate='[ "Josh", "Garret", "Danilo", "Giovanna", "Raymond" ]'><span className="wrap">{text}</span></span></h1>
                             <h2>Impact</h2>
                             <p> affect the mental well-being of patients, carers, and families. Anxiety, anguish, and depression are typical emotions experienced after this life-altering event. <br></br> Roles at work, school, and home may all change. It's critical to detect these changes and seek assistance when required.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={meter1} alt="Financials" />
                                     <h5>Financials</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
+                                    <img src={meter2} alt="Survival Chances" />
                                     <h5>Survival Chances</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                    <img src={meter3} alt="Alternative solution" />
                                     <h5>Alternative solution</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={meter1} alt="Resources" />
                                     <h5>Resources</h5>
                                 </div>
                             </Carousel>
@@ -101,7 +100,6 @@ export const Impact = () => {
                     </div>
                 </div>
             </div>
-            <img className="background-image-left" src={colorSharp} alt="Image" />
         </section>
       )
 

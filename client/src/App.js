@@ -1,22 +1,35 @@
-import logo from './logo.svg';
+//Auth
+import { UserAuthContextProvider } from "./contexts/UserAuthContext";
+
+// Routing
+import { Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+// Style
 import './App.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Impact } from "./components/Impact";
-import { Projects } from "./components/Projects";
-import { Footer } from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Upload } from 'react-bootstrap-icons';
+
+// Pages
+import { LandingPage } from "./pages/LandingPage/LandingPage";
+import { SignIn } from "./pages/SignIn/SignIn";
+import { Dashboard } from "./pages/Dashboard/Dashboard";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <Upload />
-      <Impact />
-      <Projects />
-      <Footer />
+      <UserAuthContextProvider>
+        <Routes>
+          <Route exact path="/" element={<LandingPage />}/>
+          <Route exact path="/login" element={<SignIn />}/>
+          <Route exact path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }/>
+          <Route exact path="/*" element={<NotFound />} />
+        </Routes>
+      </UserAuthContextProvider>
     </div>
   );
 }
