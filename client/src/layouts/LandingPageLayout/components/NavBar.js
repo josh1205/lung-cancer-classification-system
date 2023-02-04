@@ -1,13 +1,35 @@
+// React
 import { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
+
+// Style
 import { Navbar, Nav, Container } from "react-bootstrap";
+
+// Assets
 import logo from '../../../assets/img/logo.svg';
 import navIcon1 from '../../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../../assets/img/nav-icon2.svg';
 import navIcon3 from '../../../assets/img/nav-icon3.svg';
 
 export const NavBar = () => {
+  const [error, setError] = useState("");
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      navigate("/login");
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError(`Unexpected Error: ${error}`);
+      }
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -48,7 +70,7 @@ export const NavBar = () => {
               <a href="https://www.facebook.com/lockheedmartin"><img src={navIcon2} alt="" /></a>
               <a href="https://www.facebook.com/lockheedmartin"><img src={navIcon3} alt="" /></a>
             </div>
-              <button className="vvd"><span>Let’s Connect</span></button>
+              <button className="vvd" onClick={handleSignIn}><span>Sign in</span></button>
           </span>
         </Navbar.Collapse>
       </Container>
