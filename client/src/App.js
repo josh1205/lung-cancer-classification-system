@@ -10,9 +10,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages
-import { LandingPage } from "./pages/LandingPage/LandingPage";
-import { SignIn } from "./pages/SignIn/SignIn";
-import { Dashboard } from "./pages/Dashboard/Dashboard";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import SignIn from "./pages/SignIn/SignIn";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import NotFound from "./pages/NotFound/NotFound";
 import Upload from "./pages/LandingPage/components/Upload";
 import Profile from "./pages/Profile/Profile"
