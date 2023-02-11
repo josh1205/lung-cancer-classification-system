@@ -6,8 +6,11 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 import { useUserAuth } from "../../../contexts/UserAuthContext";
 
 // Firebase
-import { db } from "../../../firebase";
+import { db, storage } from "../../../firebase";
 
+// Storage
+import { useDownloadURL } from 'react-firebase-hooks/storage';
+import { ref, getDownloadURL } from 'firebase/storage';
 
 // React
 import React from "react";
@@ -20,16 +23,23 @@ export default function DisplayPatients() {
     const { user } = useUserAuth();
 
     // VARIABLES
-    const uid = `${user.uid}room`;
-
-    // Refs
-    const patientsRef = collection(db, `rooms/${uid}/patients`,);
+    const room = `${user.uid}room`;
 
     // Firebase hooks
     const [patients, patientsLoading, patientsError] = useCollection(
-        collection(db, `rooms/${uid}/patients`),
+        collection(db, `rooms/${room}/patients`),
     );
 
+    //const [url, urlLoading, urlError] = useDownloadURL(ctScanRef);
+
+    const imageUrl = (id, fileName) => {
+        const imagePath = `ctscans/${room}/${id}/${}`
+        const ctScanRef = ref(storage, imagePath);
+        getDownloadURL(ctScanRef)
+            .then((url) => {
+
+            })
+    }
 
     return (
         <div>
@@ -43,7 +53,7 @@ export default function DisplayPatients() {
                                 <React.Fragment key={doc.id}>
                                     <div className="card patient-card mx-2 pt-1">
                                             <h5 className="card-title">{`${doc.data().first_name} ${doc.data().last_name}`}</h5>
-                                            <img className="card-img-top image-shape" src={doc.data().url} alt="Patient CT Scan" />
+                                            <img className="card-img-top image-shape" src={() => imageUrl(doc.id, doc.data().file_name)} alt="Patient CT Scan" />
                                             <div className="card-body">
                                                 <strong>{`${doc.data().image_name}`}</strong>
                                             </div>

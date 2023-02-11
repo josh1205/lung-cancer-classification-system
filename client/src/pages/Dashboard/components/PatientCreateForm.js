@@ -1,21 +1,15 @@
 // Database
 import { collection, addDoc } from 'firebase/firestore';
-import { useCollection } from 'react-firebase-hooks/firestore';
-
-// Storage
-import { ref } from 'firebase/storage';
-import { useUploadFile, useDownloadURL } from 'react-firebase-hooks/storage';
 
 // Auth
 import { useUserAuth } from "../../../contexts/UserAuthContext";
 
 // Firebase
-import { db, storage } from "../../../firebase";
+import { db } from "../../../firebase";
 
 
 // React
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
 
 // CSS
 import "./CSS/PatientCreateForm.css"
@@ -34,20 +28,10 @@ export default function PatientCreateForm() {
     const { user } = useUserAuth();
 
     // VARIABLES
-    const navigate = useNavigate();
-    const uid = `${user.uid}room`;
-    const imagePath = `ctscans/${imageName}`
+    const room = `${user.uid}room`;
 
     // Refs
-    const ctScanRef = ref(storage, imagePath);
-    const patientsRef = collection(db, `rooms/${uid}/patients`,);
-
-    // Firebase hooks
-    const [uploadFile, uploading, uploadSnapshot, uploadError] = useUploadFile();
-    const [url, urlLoading, urlError] = useDownloadURL(ref(storage, imagePath));
-    const [patients, patientsLoading, patientsError] = useCollection(
-        collection(db, `rooms/${uid}/patients`),
-    );
+    const patientsRef = collection(db, `rooms/${room}/patients`);
 
     const patientData = {
         email: email,
@@ -55,23 +39,15 @@ export default function PatientCreateForm() {
         last_name: lastName,
         stage: parseInt(stage),
         tumor_width: parseFloat(tumorWidth),
-        image_name: imageName,
-        url: url
+        image_name: imageName
     };
 
 
     // FUNCTIONS
-
-    const upload = () => {
-        if (selectedFile) {
-          uploadFile(ctScanRef, selectedFile);
-        }
-    }
-
-    const handlePatientCreation = (e) => {
+    const handlePatientCreation = async (e) => {
         e.preventDefault();
         if (email && firstName && lastName && stage, tumorWidth && imageName && selectedFile) {
-            upload();
+            await addDoc(patientsRef, patientData);
         } else {
             alert("Not all create patient fields are filled");
         }
