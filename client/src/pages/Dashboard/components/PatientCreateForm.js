@@ -30,28 +30,27 @@ export default function PatientCreateForm() {
     // VARIABLES
     const room = `${user.uid}room`;
 
-    // Refs
-    const patientsRef = collection(db, `rooms/${room}/patients`);
-
     const patientData = {
         email: email,
         first_name: firstName,
         last_name: lastName,
         stage: parseInt(stage),
         tumor_width: parseFloat(tumorWidth),
-        image_name: imageName
+        image_name: imageName,
+        file_name: String(selectedFile)
     };
 
 
     // FUNCTIONS
     const handlePatientCreation = async (e) => {
         e.preventDefault();
-        if (email && firstName && lastName && stage, tumorWidth && imageName && selectedFile) {
+        const patientsRef = collection(db, `rooms/${room}/patients`);
+        if (email && firstName && lastName && stage && tumorWidth && imageName && selectedFile) {
             await addDoc(patientsRef, patientData);
         } else {
             alert("Not all create patient fields are filled");
         }
-      };
+    };
 
     return (
         <div>
