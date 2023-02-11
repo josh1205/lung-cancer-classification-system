@@ -15,6 +15,7 @@ import { SignIn } from "./pages/SignIn/SignIn";
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import NotFound from "./pages/NotFound/NotFound";
 import Upload from "./pages/LandingPage/components/Upload";
+import Profile from "./pages/Profile/Profile"
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
           <Route exact path="/dashboard" element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }/>
+          <Route exact path="/profile" element={
+            <ProtectedRoute>
+              <Profile />
             </ProtectedRoute>
           }/>
           <Route exact path="/*" element={<NotFound />} />

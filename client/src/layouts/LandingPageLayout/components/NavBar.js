@@ -29,6 +29,7 @@ export const NavBar = () => {
         setError(`Unexpected Error: ${error}`);
       }
     }
+    console.log(error)
   };
 
   useEffect(() => {
