@@ -3,7 +3,7 @@ import { Banner } from "./components/Banner";
 import { Impact } from "./components/Impact";
 import { Projects } from "./components/Projects";
 
-export const LandingPage = () => {
+export default function LandingPage() {
     return (
         <LandingPageLayout>
             <Banner />
