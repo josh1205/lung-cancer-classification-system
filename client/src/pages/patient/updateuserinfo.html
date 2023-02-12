@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styling.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+  rel="stylesheet"
+  />
+  <title>Update Info</title>
+</head>
+
+<body>
+  <nav>
+    <div class="heading">
+      <h4>Navigation Bar</h4>
+    </div>
+    <ul class="topnav">
+      <a class="active" href="userhomepage.html">Home</a>
+      <a href="contactdoctor.html">Contact Doctor</a>
+      <a href="updateuserinfo.html">Update Information</a>
+      <a href="#logout">Logout</a>
+    </ul>
+  </nav>
+  <div class="top-text">
+    <h1>Update Information</h1>
+  </div>
+  <div class="body-text">
+
+      <label for="info">Choose what information you would like to update:</label>
+
+      <select id="target">
+        <option value="">Select...</option>
+        <option value="content_1">Your Medical History</option>
+        <option value="content_2">Family Medical History</option>
+        <option value="content_3">Your Contact Info</option>
+    <select>
+
+    <div id="content_1" class="inv">
+        <label for="medDocumentPatient"><br style = "line-height:500px;">Upload Medical Document (docx/pdf allowed):</label>
+        <input type="file" id="medDocumentPatient" accept=".doc,.docx,.pdf" />
+        <button type="submit">Submit</button>
+    </div>
+
+    <div id="content_2" class="inv">
+        <form>
+            <label for="relation"><br style = "line-height:500px;">Relation of family member to you:</label><br>
+            <input type="text" id="relation" name="relation"><br>
+            <label for="diagnosticInfoFamily">Diagnosis received:</label><br>
+            <input type="text" id="diagnosticInfoFamily" name="diagnosticInfoFamily"><br>
+            <label for="diagnosticDate">Date of diagnosis (if available):</label><br>
+            <input type="text" id="diagnosticDate" name="diagnosticDate"><br>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="content_3" class="inv">
+
+        <label for="info"><br style = "line-height:500px;">Choose what information you would like to update (leave blank if still correct):</label>
+    
+        <form>
+            <label for="email"><br style = "line-height:500px;">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="patientPhoneNumber">Phone Number (enter as ##########):</label><br>
+            <input type="text" id="patientPhoneNumber" name="patientPhoneNumber"><br>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document
+            .getElementById('target')
+            .addEventListener('change', function () {
+                'use strict';
+                var vis = document.querySelector('.vis'),   
+                    target = document.getElementById(this.value);
+                if (vis !== null) {
+                    vis.className = 'inv';
+                }
+                if (target !== null ) {
+                    target.className = 'vis';
+                }
+        });
+    </script>
+   
+  </div>
+</body>
+
+</html>
