@@ -8,13 +8,13 @@ export default function Navbar() {
     return (
         <nav>
             <div className="heading">
-                <h4 onClick={() => navigate('/dashboard')}>Navigation Bar</h4>
+                <h4>Navigation Bar</h4>
             </div>
             <ul className="topnav">
                 <a className="active" href="" onClick={() => navigate('/patient')}>Home</a>
                 <a href="" onClick={() => navigate('/contact-doctor')}>Contact Doctor</a>
                 <a href="" onClick={() => navigate('/update-userinfo')}>Update Information</a>
-                <a href="#logout">Logout</a>
+                <a href="" onClick={() => navigate('/dashboard')}>Logout</a>
             </ul>
         </nav>
     )
