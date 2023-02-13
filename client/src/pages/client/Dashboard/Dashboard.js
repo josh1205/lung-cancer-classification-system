@@ -1,5 +1,5 @@
 // Auth
-import { useUserAuth } from "../../contexts/UserAuthContext";
+import { useUserAuth } from "../../../contexts/UserAuthContext";
 
 // React
 import React from "react";
@@ -35,6 +35,14 @@ export default function Dashboard() {
       }
     }
 
+    const handlePatient = async () => {
+      try {
+        navigate("/patient");
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+
     return (
         <div>
             <h1>Welcome to the Vanilla Dashboard</h1>
@@ -44,6 +52,7 @@ export default function Dashboard() {
                 <button type="button" className="m-3 btn btn-primary">Upload CT Scan</button>
                 <button onClick={handleProfile} type="button" className="m-3 btn btn-primary">Profile</button>
                 <button onClick={handleLogout} type="button" className="m-3 btn btn-primary">Logout</button>
+                <button onClick={handlePatient} type="button" className="m-3 btn btn-primary">Patient</button>
             </div>
             <div>
                 <div>

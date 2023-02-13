@@ -3,10 +3,10 @@ import { collection } from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
 // Auth
-import { useUserAuth } from "../../../contexts/UserAuthContext";
+import { useUserAuth } from "../../../../contexts/UserAuthContext";
 
 // Firebase
-import { db } from "../../../firebase";
+import { db } from "../../../../firebase";
 
 // React
 import React from "react";
@@ -38,7 +38,7 @@ export default function DisplayPatients() {
                                 <React.Fragment key={doc.id}>
                                     <div className="card patient-card mx-2 pt-1">
                                             <h5 className="card-title">{`${doc.data().first_name} ${doc.data().last_name}`}</h5>
-                                            <img id="patient-img-tag" className="card-img-top image-shape" src="" alt="Patient CT Scan" />
+                                            <img id="patient-img-tag" className="card-img-top image-shape" src={doc.data().file_name} alt="Patient CT Scan" />
                                             <div className="card-body">
                                                 <strong>{`${doc.data().image_name}`}</strong>
                                             </div>

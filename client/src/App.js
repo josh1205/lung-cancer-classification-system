@@ -10,12 +10,15 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages
-import LandingPage from "./pages/LandingPage/LandingPage";
-import SignIn from "./pages/SignIn/SignIn";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import NotFound from "./pages/NotFound/NotFound";
-import Upload from "./pages/LandingPage/components/Upload";
-import Profile from "./pages/Profile/Profile"
+import LandingPage from "./pages/shared/LandingPage/LandingPage";
+import SignIn from "./pages/shared/SignIn/SignIn";
+import Dashboard from "./pages/client/Dashboard/Dashboard";
+import NotFound from "./pages/shared/NotFound/NotFound";
+import Upload from "./pages/shared/LandingPage/components/Upload";
+import Profile from "./pages/shared/Profile/Profile"
+import Patient from "./pages/patient/Patient"
+import ContactDoctor from "./pages/patient/ContactDoctor";
+import UpdateUserInfo from "./pages/patient/UpdateUserInfo";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
               <Profile />
             </ProtectedRoute>
           }/>
+          <Route exact path="/patient" element={<Patient />}/>
+          <Route exact path="/contact-doctor" element={<ContactDoctor />}/>
+          <Route exact path="/update-userinfo" element={<UpdateUserInfo />}/>
           <Route exact path="/*" element={<NotFound />} />
         </Routes>
       </UserAuthContextProvider>

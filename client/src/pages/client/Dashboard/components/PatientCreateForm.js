@@ -2,10 +2,10 @@
 import { collection, addDoc } from 'firebase/firestore';
 
 // Auth
-import { useUserAuth } from "../../../contexts/UserAuthContext";
+import { useUserAuth } from "../../../../contexts/UserAuthContext";
 
 // Firebase
-import { db } from "../../../firebase";
+import { db } from "../../../../firebase";
 
 
 // React
