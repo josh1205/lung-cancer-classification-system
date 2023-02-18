@@ -426,10 +426,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #002756cc -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #002756cc -5.91%, #86bcfd 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
