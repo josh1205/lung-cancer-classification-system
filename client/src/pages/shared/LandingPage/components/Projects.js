@@ -50,7 +50,6 @@ export const Projects = () => {
                 <TrackVisibility>
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                    
                     <h2>CT Scan</h2>
                     <p>stage 0 – the cancer is where it started (in situ) and hasn't spread
                         stage 1 – the cancer is small and hasn't spread anywhere else
