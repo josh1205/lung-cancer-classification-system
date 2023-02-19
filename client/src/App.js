@@ -6,8 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 // Style
+import 'bootswatch/dist/yeti/bootstrap.min.css';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Pages
 import LandingPage from "./pages/shared/LandingPage/LandingPage";
