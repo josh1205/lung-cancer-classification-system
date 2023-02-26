@@ -9,6 +9,9 @@ import { useNavigate } from 'react-router-dom';
 import PatientCreateForm from "./components/PatientCreateForm"
 import DisplayPatients from "./components/DisplayPatients"
 
+// Layout
+import MainLayout from "../layouts/MainLayout/MainLayout";
+
 export default function Dashboard() {
     // Auth
     const { user, logOut} = useUserAuth();
@@ -44,16 +47,14 @@ export default function Dashboard() {
     }
 
     return (
-        <div>
-            <h1>Welcome to the Vanilla Dashboard</h1>
-            <span>{`Practitioner email: ${user.email}`}</span>
-            <div>
-                <h3>Top Nav Links</h3>
-                <button type="button" className="m-3 btn btn-primary">Upload CT Scan</button>
-                <button onClick={handleProfile} type="button" className="m-3 btn btn-primary">Profile</button>
-                <button onClick={handleLogout} type="button" className="m-3 btn btn-primary">Logout</button>
-                <button onClick={handlePatient} type="button" className="m-3 btn btn-primary">Patient</button>
+        <MainLayout>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h1 className="align-center">Welcome to the Dashboard {user.email}</h1>
+              </div>
             </div>
+          </div>
             <div>
                 <div>
                     <h3>Main Page</h3>
@@ -65,7 +66,7 @@ export default function Dashboard() {
                 {/* Patient data from firebase */}
                 <DisplayPatients />
             </div>
-        </div>
+        </MainLayout>
     )
 
 }
