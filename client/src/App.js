@@ -19,6 +19,7 @@ import Profile from "./pages/shared/Profile/Profile"
 import Patient from "./pages/patient/Patient"
 import ContactDoctor from "./pages/patient/ContactDoctor";
 import UpdateUserInfo from "./pages/patient/UpdateUserInfo";
+import ResetPassword from "./pages/ResetPassword/ResetPassword";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<LandingPage />}/>
           <Route exact path="/login" element={<SignIn />}/>
+          <Route exact path="/resetPassword" element={<ResetPassword />}/>
           <Route exact path="/upload" element={<Upload />}/>
           <Route exact path="/dashboard" element={
             <ProtectedRoute>

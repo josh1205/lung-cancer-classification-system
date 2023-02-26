@@ -1,0 +1,82 @@
+/* Set background color and font styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the profile page heading */
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0097a7;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the form */
+  form {
+    background-color: #ADD8E6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+  }
+  
+  /* Style the form inputs */
+  input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* Style the form submit button */
+  button[type="submit"] {
+    background-color: #0097a7;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Style the back to dashboard button */
+  button[type="button"] {
+    background-color: #ff8f00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Style the reset password button */
+  button[type="button"]:nth-child(2) {
+    background-color: #0097a7;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Style the error message */
+  p {
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
