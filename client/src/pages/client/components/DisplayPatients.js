@@ -3,10 +3,10 @@ import { collection } from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
 // Auth
-import { useUserAuth } from "../../../../contexts/UserAuthContext";
+import { useUserAuth } from "../../../contexts/UserAuthContext";
 
 // Firebase
-import { db } from "../../../../firebase";
+import { db } from "../../../firebase";
 
 // React
 import React from "react";

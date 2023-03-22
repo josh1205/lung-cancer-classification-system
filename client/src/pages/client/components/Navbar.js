@@ -3,15 +3,19 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 // Auth
-import { useUserAuth } from "../../../../../contexts/UserAuthContext";
+import { useUserAuth } from "../../../contexts/UserAuthContext";
 
 // Assets
-import logo from "../../../../../assets/img/lung-logo.svg"
+import logo from "../../../assets/img/lung-logo.svg"
+
+// Components
+import Upload from "./Upload"
 
 //CSS
 import './CSS/Navbar.css'
 
 export default function Navbar() {
+
     const navigate = useNavigate();
     const { logOut } = useUserAuth();
 
@@ -42,7 +46,8 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse justify-content-end me-3" id="navbarColor01">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <button className="btn btn-secondary rounded-pill ms-4" style={{ width: 100 }}>Upload</button>
+                                {/* <button className="btn btn-secondary rounded-pill ms-4" style={{ width: 100 }}>Upload</button> */}
+                                <Upload />
                             </li>
                             <li class="nav-item py-1 col-12 col-lg-auto">
                                 <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
