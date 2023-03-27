@@ -12,7 +12,7 @@ export const Projects = () => {
     const projects = [
       {
         title: "CT SCAN",
-        description: "Stage 0 lung cancer",
+        description: "Stage 1 lung cancer",
         imgUrl: projImg1,
       },
       {
@@ -22,22 +22,22 @@ export const Projects = () => {
       },
       {  
         title: "CT SCAN",
-        description: "Stage 2 lung cancer",
+        description: "Stage 1 lung cancer",
         imgUrl: projImg3,
       },
       {
         title: "CT SCAN",
-        description: "Stage 3 lung cancer",
+        description: "Stage 1 lung cancer",
         imgUrl: projImg1,
       },
       {
         title: "CT SCAN",
-        description: "Stage 4 lung cancer",
+        description: "Stage 1 lung cancer",
         imgUrl: projImg2,
       },
       {
         title: "CT SCAN",
-        description: "Stage 5 lung cancer",
+        description: "Stage 1 lung cancer",
         imgUrl: projImg3,
       },
     ];
@@ -58,26 +58,23 @@ export const Projects = () => {
                         stage 4 – the cancer has spread from where it started to at least 1 other body organ, also known as "secondary" or "metastatic" cancer</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                      <Nav.Item>
-                          <Nav.Link eventKey="first">Stage 0</Nav.Link>
+                        <Nav.Item>
+                          <Nav.Link eventKey="first">Stage 1</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                          <Nav.Link eventKey="second">Stage 1</Nav.Link>
+                          <Nav.Link eventKey="second">Stage 2</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                          <Nav.Link eventKey="third">Stage 2</Nav.Link>
+                          <Nav.Link eventKey="third">Stage 3</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                          <Nav.Link eventKey="fourth">Stage 3</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="fith">Stage 4
+                          <Nav.Link eventKey="fourth">Stage 4
                           </Nav.Link>
                         </Nav.Item>
                       </Nav>
                       <Tab.Content>
                         <Tab.Pane eventKey="first">
-                          <Row style={{color: 'white'}}>
+                          <Row>
                             {
                               projects.map((project, index) => {
                                 return (

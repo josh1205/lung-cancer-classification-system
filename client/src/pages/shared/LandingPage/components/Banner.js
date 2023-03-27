@@ -16,11 +16,12 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline" id="id" style={{ color: 'white', fontWeight: 'bold', textShadow: '1px 1px 1px black'}}><center>Cancer Classification</center></span>
-                <p id="id" style={{ color: 'white', fontWeight: 'bold', textShadow: '1px 1px 1px black'}}>When determining the appropriate treatment options, the clinical stage is frequently a crucial factor. 
-                    It can also be applied when attempting to determine a person's outlook or prognosis.
-                    For instance, the stage at the time of diagnosis determines the survival rates for the majority of cancer types.</p>
-                  <button onClick={() => console.log('/Upload.js')} id="id" style={{ color: 'white', fontWeight: 'bold', textShadow: '1px 1px 1px black'}}>Upload below <ArrowRightCircle size={25} /></button>
+                <span className="tagline"><center>Cancer Classification</center></span>
+                  <p>When determining the appropriate treatment options, the clinical stage is frequently a crucial factor. </p>
+                    <p>It can also be applied when attempting to determine a person's outlook or prognosis.</p> 
+                    <p>For instance, the stage at the time of diagnosis determines the survival rates for the majority of cancer types.</p>
+                  <button onClick={() => console.log('/Upload.js')}>Upload below <ArrowRightCircle size={25} /></button>
+              
                   
               </div>}
             </TrackVisibility>
@@ -44,4 +45,7 @@ export const Banner = () => {
     
     
   )
+
+
 }
+
