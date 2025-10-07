@@ -15,7 +15,6 @@ This system provides a user-friendly interface for doctors and nurses to manage 
 - **CT Scan Management**: Upload, view, and manage patient CT scan images
 - **AI-Powered Diagnosis**: Automated lung cancer stage classification using VGG16 neural network
 - **Patient Dashboard**: Comprehensive view of patient records and scan results
-- **Secure File Storage**: HIPAA-compliant storage and retrieval of medical images
 
 ### 👨‍💼 Administrative Features
 - **User Management**: Add, edit, and delete user accounts
